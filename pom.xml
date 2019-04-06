@@ -6,17 +6,31 @@
   <name>TestJenkins</name>
   <build>
    <plugins>
-    <plugin>
-     <groupId>org.apache.tomcat.maven</groupId>
-      <artifactId>tomcat7-maven-plugin</artifactId>
-      <configuration>
-      <url>http://localhost:8088/Test2</url>
-        <path>/</path>
-      <server>tomcat</server>
-      <username>tomcat</username>
-      <password>tomcat</password>
-      </configuration>
-    </plugin>
+       <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:8088/Test2</url>
+                    <username>tomcat</username>
+                    <password>tomcat</password>
+                    <path>/</path>
+                    <uriEncoding>UTF-8</uriEncoding>
+                    <server>tomcat7</server>
+                </configuration>
+            </plugin>
    </plugins>
   </build>
+  
+     
+  <repositories>
+        <repository>
+            <id>aliyun</id>
+            <name>aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+   </repositories> 
+     
+     
+
 </project>
