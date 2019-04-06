@@ -4,5 +4,19 @@
   <artifactId>tt</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>TestJenkins</name>
-  <build/>
+  <build>
+   <plugins>
+    <plugin>
+     <groupId>org.apache.tomcat.maven</groupId>
+      <artifactId>tomcat7-maven-plugin</artifactId>
+      <configuration>
+      <url>http://localhost:8088/Test2</url>
+        <path>/</path>
+      <server>tomcat</server>
+      <username>tomcat</username>
+      <password>tomcat</password>
+      </configuration>
+    </plugin>
+   </plugins>
+  </build>
 </project>
